@@ -32,7 +32,7 @@ import speak.draw.ai.art.photo.image.generator.databinding.ActivityUpscaleResult
 
 /* loaded from: classes.dex */
 public final class UpScaleResult extends AppCompatActivity {
-    private final Lazy binding$delegate = LazyKt.lazy(new Function0<ActivityUpscaleResultBinding>() { // from class: com.example.speakanddraw.UpScaleResult$binding$2
+    private final Lazy binding$delegate   = LazyKt.lazy(new Function0<ActivityUpscaleResultBinding>() { // from class: com.example.speakanddraw.UpScaleResult$binding$2
         /* JADX INFO: Access modifiers changed from: package-private */ {
         }
 
