@@ -10,10 +10,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.speakanddraw.Ads.AdsExtensionKt;
 import com.example.speakanddraw.object.Constants;
 import com.example.speakanddraw.utlis.TinyDB;
+
 import org.koin.android.ext.android.AndroidKoinScopeExtKt;
+
 import kotlin.Lazy;
 import kotlin.LazyKt;
 import kotlin.jvm.functions.Function0;
