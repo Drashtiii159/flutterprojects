@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/design_bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:fontFamily="@font/nunito_bold"
+        android:gravity="center"
+        android:text="@string/result"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_17ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintEnd_toStartOf="@+id/share"
+        app:layout_constraintStart_toEndOf="@+id/back"
+        app:layout_constraintTop_toTopOf="@+id/back" />
+
+    <ImageView
+        android:id="@+id/share"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:src="@drawable/share"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/share"
+        app:layout_constraintStart_toStartOf="@+id/back"
+        app:layout_constraintTop_toBottomOf="@+id/back">
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/mainLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/imageBackGround"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/architecture"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:roundPercent="0.13" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|bottom"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:src="@drawable/logo"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageBackGround"
+                        app:layout_constraintEnd_toEndOf="@+id/imageBackGround" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/upscale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/upscale"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/generateMore"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@drawable/text_bg"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toStartOf="@+id/export"
+                    app:layout_constraintStart_toStartOf="@+id/mainLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/mainLayout">
+
+                    <TextView
+                        android:id="@+id/generate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:fontFamily="@font/nunito_extra_bold"
+                        android:includeFontPadding="false"
+                        android:text="@string/generate_more"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14ssp" />
+
+                    <TextView
+                        android:id="@+id/perDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:fontFamily="@font/nunito_semi_bold"
+                        android:text="@string/_5_10_per_day"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10ssp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/generate" />
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/export"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/export_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mainLayout"
+                    app:layout_constraintWidth_percent="0.32">
+
+                    <ImageView
+                        android:id="@+id/exportImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:src="@drawable/export"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/textView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:gravity="top"
+                        android:text="@string/export"
+                        android:textColor="@color/purple"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/exportImage"
+                        app:layout_constraintTop_toTopOf="@+id/exportImage" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

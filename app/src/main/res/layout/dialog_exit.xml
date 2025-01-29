@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/exit_bg">
+
+    <TextView
+        android:id="@+id/exit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/nunito_regular"
+        android:gravity="center"
+        android:text="@string/exit_sure"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <TextView
+        android:id="@+id/no"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/bg_e8_btn"
+        android:fontFamily="@font/nunito_bold"
+        android:gravity="center"
+        android:text="No"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintStart_toStartOf="@+id/exit_text"
+        app:layout_constraintTop_toBottomOf="@+id/exit_text" />
+
+    <TextView
+        android:id="@+id/yes"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/text_bg"
+        android:fontFamily="@font/nunito_bold"
+        android:gravity="center"
+        android:text="Yes"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintEnd_toEndOf="@+id/exit_text"
+        app:layout_constraintTop_toBottomOf="@+id/exit_text" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yes" />
+</androidx.constraintlayout.widget.ConstraintLayout>

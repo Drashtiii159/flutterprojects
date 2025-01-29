@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.speakanddraw.Fragment.HomeFragment"
+        android:label="fragment_home" />
+    <fragment
+        android:id="@+id/inspireFragment"
+        android:name="com.example.speakanddraw.Fragment.InspireFragment"
+        android:label="fragment_inspire" />
+    <fragment
+        android:id="@+id/upScaleFragment"
+        android:name="com.example.speakanddraw.Fragment.UpScaleFragment"
+        android:label="fragment_up_scale" />
+</navigation>

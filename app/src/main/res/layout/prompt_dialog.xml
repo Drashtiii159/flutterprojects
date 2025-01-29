@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="@dimen/_240sdp"
+        android:layout_height="@dimen/_240sdp"
+        android:layout_gravity="center_horizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/i2" />
+
+        <ImageView
+            android:id="@+id/closeBtn"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/close_btn" />
+
+        <TextView
+            android:id="@+id/currentTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/Try"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:gravity="center"
+            android:text="@string/create_an_image"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9ssp" />
+
+        <TextView
+            android:id="@+id/Try"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/button_white_bg"
+            android:gravity="center"
+            android:text="@string/try_this"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/_12ssp" />
+    </RelativeLayout>
+</FrameLayout>

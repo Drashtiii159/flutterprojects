@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_advanved_bottom_sheet"
+    android:backgroundTint="@color/white">
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:src="@drawable/record_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/voiceYourPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="@string/voice_your_prompt"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/textHold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/voiceYourPrompt" />
+
+    <TextView
+        android:id="@+id/textHold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:text="@string/tap_and_hold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintBottom_toTopOf="@+id/record_mic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/record_mic"
+        android:layout_width="@dimen/_55sdp"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:src="@drawable/mic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/cross"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cross"
+        app:layout_constraintBottom_toBottomOf="@+id/record_mic"
+        app:layout_constraintEnd_toStartOf="@+id/record_mic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/record_mic" />
+
+    <ImageView
+        android:id="@+id/tick"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:src="@drawable/tick"
+        app:layout_constraintBottom_toBottomOf="@+id/record_mic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/record_mic"
+        app:layout_constraintTop_toTopOf="@+id/record_mic" />
+</androidx.constraintlayout.widget.ConstraintLayout>

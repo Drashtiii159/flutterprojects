@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_advanved_bottom_sheet"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/_10sdp"
+    android:paddingEnd="@dimen/_10sdp">
+
+    <ImageView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_top_bottom_sheet" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/settings"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/negative_prompt"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10ssp" />
+
+    <EditText
+        android:id="@+id/negative_prompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/bg_neg_prompt"
+        android:fontFamily="@font/nunito_bold"
+        android:hint="@string/don_t_include"
+        android:padding="16dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10ssp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/cfg_scale"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10ssp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:max="20"
+            android:progress="0"
+            android:progressBackgroundTint="@color/purple"
+            android:progressTint="@color/purple"
+            android:thumbTint="@color/purple"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/nunito_bold"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/match_prompt"
+            android:textColor="#717171"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:fontFamily="@font/nunito_regular"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/better_quality"
+            android:textColor="#717171"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slider" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Image Strength"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10ssp"
+        android:visibility="gone" />
+
+    <SeekBar
+        android:id="@+id/image_strength_seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="50"
+        android:progressBackgroundTint="?android:attr/textColorPrimary"
+        android:progressTint="@color/blue"
+        android:thumbTint="@color/blue"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/selected_clip_guidance_preset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Clip Guidance Preset"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10ssp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/clip_guidance_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/seed"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10ssp" />
+
+    <EditText
+        android:id="@+id/seed_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/bg_neg_prompt"
+        android:fontFamily="@font/nunito_bold"
+        android:hint="@string/hind_advance_setting"
+        android:inputType="number"
+        android:padding="16dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10ssp" />
+</LinearLayout>
